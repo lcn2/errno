@@ -4,9 +4,9 @@
  * usage:
  *	errno num ...
  *
- * @(#) $Revision$
- * @(#) $Id$
- * @(#) $Source$
+ * @(#) $Revision: 1.1 $
+ * @(#) $Id: errno.c,v 1.1 1999/09/22 02:18:39 chongo Exp chongo $
+ * @(#) $Source: /usr/local/src/cmd/errno/RCS/errno.c,v $
  *
  * Copyright (c) 1987 by Landon Curt Noll.  All Rights Reserved.
  *
@@ -31,7 +31,7 @@
 
 #include <stdio.h>
 extern int errno;		/* last system error */
-extern char *sys_errlist[];	/* perror message list */
+extern const char *const sys_errlist[];	/* perror message list */
 extern int sys_nerr;		/* length of sus_errlist */
 
 main(argc, argv)
