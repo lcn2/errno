@@ -4,8 +4,8 @@
  * usage:
  *	errno num ...
  *
- * @(#) $Revision: 1.1 $
- * @(#) $Id: errno.c,v 1.1 1999/09/22 02:18:39 chongo Exp chongo $
+ * @(#) $Revision: 1.2 $
+ * @(#) $Id: errno.c,v 1.2 1999/09/22 02:19:24 chongo Exp chongo $
  * @(#) $Source: /usr/local/src/cmd/errno/RCS/errno.c,v $
  *
  * Copyright (c) 1987 by Landon Curt Noll.  All Rights Reserved.
@@ -27,6 +27,10 @@
  * USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
  * OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
  * PERFORMANCE OF THIS SOFTWARE.
+ *
+ * chongo <was here> /\oo/\
+ *
+ * Share and enjoy!
  */
 
 #include <stdio.h>
