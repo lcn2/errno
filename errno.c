@@ -4,11 +4,11 @@
  * usage:
  *	errno num ...
  *
- * @(#) $Revision: 1.2 $
- * @(#) $Id: errno.c,v 1.2 1999/09/22 02:19:24 chongo Exp chongo $
- * @(#) $Source: /usr/local/src/cmd/errno/RCS/errno.c,v $
+ * @(#) $Revision: 1.3 $
+ * @(#) $Id: errno.c,v 1.3 1999/09/27 05:36:31 chongo Exp root $
+ * @(#) $Source: /usr/local/src/bin/errno/RCS/errno.c,v $
  *
- * Copyright (c) 1987 by Landon Curt Noll.  All Rights Reserved.
+ * Copyright (c) 1987,2015 by Landon Curt Noll.  All Rights Reserved.
  *
  * Permission to use, copy, modify, and distribute this software and
  * its documentation for any purpose and without fee is hereby granted,
@@ -34,6 +34,8 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>
+
 extern int errno;		/* last system error */
 extern const char *const sys_errlist[];	/* perror message list */
 extern int sys_nerr;		/* length of sus_errlist */
