@@ -2,9 +2,9 @@
 #
 # errno - print a system message
 #
-# @(#) $Revision: 1.1 $
-# @(#) $Id: Makefile,v 1.1 1999/09/22 02:18:39 chongo Exp chongo $
-# @(#) $Source: /usr/local/src/cmd/errno/RCS/Makefile,v $
+# @(#) $Revision: 1.2 $
+# @(#) $Id: Makefile,v 1.2 1999/09/27 05:36:31 chongo Exp $
+# @(#) $Source: /usr/local/src/bin/errno/RCS/Makefile,v $
 #
 # Copyright (c) 1987 by Landon Curt Noll.  All Rights Reserved.
 #
