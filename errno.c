@@ -8,7 +8,7 @@
  * @(#) $Id: errno.c,v 1.4 2015/09/06 07:10:47 root Exp $
  * @(#) $Source: /usr/local/src/bin/errno/RCS/errno.c,v $
  *
- * Copyright (c) 1987,2015 by Landon Curt Noll.  All Rights Reserved.
+ * Copyright (c) 1987,2015,2023 by Landon Curt Noll.  All Rights Reserved.
  *
  * Permission to use, copy, modify, and distribute this software and
  * its documentation for any purpose and without fee is hereby granted,
@@ -35,14 +35,10 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
-extern int errno;		/* last system error */
-extern const char *const sys_errlist[];	/* perror message list */
-extern int sys_nerr;		/* length of sus_errlist */
-
-main(argc, argv)
-    int argc;		/* arg count */
-    char *argv[];	/* the args */
+int
+main(int argc, char *argv[])
 {
     int err;		/* the error number to print */
 
@@ -54,14 +50,8 @@ main(argc, argv)
 	++argv;
 	--argc;
 
-	/* detect bad error numbers */
-	if (err < 0 || err >= sys_nerr) {
-	    printf("Unknown error number %d\n", err);
-
 	/* print the system error message */
-	} else {
-	    printf("%s\n", sys_errlist[err]);
-	}
+	printf("%s\n", strerror(err));
     }
     exit(0);
 }
