@@ -1,12 +1,8 @@
-#!/usr/bin/make
+#!/usr/bin/env make
 #
 # errno - print a system message
 #
-# @(#) $Revision: 1.2 $
-# @(#) $Id: Makefile,v 1.2 1999/09/27 05:36:31 chongo Exp $
-# @(#) $Source: /usr/local/src/bin/errno/RCS/Makefile,v $
-#
-# Copyright (c) 1987 by Landon Curt Noll.  All Rights Reserved.
+# Copyright (c) 1987,2023 by Landon Curt Noll.  All Rights Reserved.
 #
 # Permission to use, copy, modify, and distribute this software and
 # its documentation for any purpose and without fee is hereby granted,
@@ -30,12 +26,14 @@
 #
 # Share and enjoy!
 
-SHELL=/bin/sh
-INSTALL=/usr/local/etc/install
-CC=cc
-CFLAGS=-O
-DESTDIR=/usr/local/bin
-#DESTDIR=${HOME}/bin
+SHELL= bash
+INSTALL= install
+CC= cc
+CFLAGS= -O3 -g3
+DESTDIR= /usr/local/bin
+RM= rm
+CP= cp
+CHMOD= chmod
 
 all: errno
 
@@ -46,15 +44,13 @@ errno.o: errno.c
 	${CC} ${CFLAGS} errno.c -c
 
 clean:
-	rm -f errno.o
+	${RM} -f errno.o
 
 clobber: clean
-	rm -f errno
+	${RM} -f errno
 
 install: all
-	-chmod +w ${DESTDIR}/errno
-	cp errno ${DESTDIR}
-	chmod 0555 ${DESTDIR}/errno
-	#${INSTALL} -m 0555 errno ${DESTDIR}
+	${CHMOD} +w ${DESTDIR}/errno
+	${INSTALL} -m 0555 errno ${DESTDIR}
 
 installman:
