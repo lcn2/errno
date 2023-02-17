@@ -50,7 +50,4 @@ clobber: clean
 	${RM} -f errno
 
 install: all
-	${CHMOD} +w ${DESTDIR}/errno
-	${INSTALL} -m 0555 errno ${DESTDIR}
-
-installman:
+	${INSTALL} -c -m 0555 errno ${DESTDIR}
