@@ -27,7 +27,7 @@ Argument list too long
 
 # To use
 
-```sh
+```
 /usr/local/bin//errno [-h] [-V] errno ...
 
     -h            print help message and exit
